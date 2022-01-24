@@ -1,5 +1,8 @@
 package com.geoffvargo.substring3distinctChars;
 
+import java.util.*;
+import java.util.stream.*;
+
 class SubstringOfThreeDistinctChars {
 	/**
 	 * A string is <b>good <u><i>if there are no repeated characters</i></u></b>.
@@ -9,13 +12,12 @@ class SubstringOfThreeDistinctChars {
 	 * A <b><i>substring</i></b> is a contiguous sequence of characters in a string.
 	 * <p/>
 	 * <h3>Example 1:</h3>
-	 * {@code }
 	 *
 	 * <blockquote>
 	 * <b><i>Input:</i></b> {@code s = "xyzzaz"}<br>
 	 * <b><i>Output:</i></b> {@code 1}<br>
 	 * <b><i>Explanation:</i></b> There are 4 substrings of size 3: {@code "xyz", "yzz", "zza",} and {@code "zaz"}.
-	 * The only good substring of length 3 is <code>"xyz"</code>.
+	 * The only <pre>good</pre> substring of length 3 is {@code "xyz"}.
 	 * </blockquote>
 	 * <p>
 	 * <p/>
@@ -28,8 +30,9 @@ class SubstringOfThreeDistinctChars {
 	 * The good substrings are {@code "abc", "bca", "cab",} and {@code "abc"}.
 	 * </blockquote>
 	 */
-	public int countGoodSubstrings(String s) {
-		String[] splitty = s.split("");
+	public static int countGoodSubstrings(String s) {
+		List<String> splitty = Arrays.stream(s.split("")).collect(Collectors.toList());
+		
 		return 0;
 	}
 }
